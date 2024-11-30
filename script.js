@@ -20,10 +20,11 @@ document.querySelectorAll('.navbar a, .cta-button').forEach(link => {
                 });
             }
         } else {
-            // 外部リンクや遷移先がある場合は、通常通り遷移を行う
-            setTimeout(() => {
-                window.location.href = targetHref;
-            }, 500);  // スクロールアニメーション後に遷移するために少し待機
+            // 外部リンクや通常の遷移先がある場合は、新しいタブで開く
+            e.preventDefault(); // デフォルトの動作をキャンセル
+
+            // 新しいタブで開く
+            window.open(targetHref, '_blank');
         }
     });
 });
