@@ -10,13 +10,13 @@
     <!-- 固定ナビゲーションバー -->
     <nav class="navbar">
         <ul>
-            <li><a href="#features">機能</a></li>
-            <li><a href="about.html">運営情報</a></li>
-            <li><a href="https://example.com" target="_blank">公式サイト</a></li>
+            <li><a href="https://example.com/features">機能</a></li> <!-- 機能ページのURL -->
+            <li><a href="about.html">運営情報</a></li> <!-- 運営情報ページのURL -->
+            <li><a href="https://example.com" target="_blank">公式サイト</a></li> <!-- 公式サイトのURL -->
         </ul>
         <div class="navbar-buttons">
-            <button class="cta-button bot-invite" onclick="navigateTo('https://example.com/bot-invite')">BOT導入</button> <!-- BOT導入のリンク -->
-            <button class="cta-button support-server" onclick="navigateTo('https://discord.gg/example')">サポートサーバー招待</button> <!-- サポートサーバーのリンク -->
+            <a href="https://example.com/bot-invite" class="cta-button bot-invite">BOT導入</a> <!-- BOT導入ページのURL -->
+            <a href="https://discord.gg/example" class="cta-button support-server">サポートサーバー招待</a> <!-- サポートサーバー招待URL -->
         </div>
     </nav>
 
@@ -25,7 +25,7 @@
         <div class="hero-content">
             <h1>Discord Botで次世代のコミュニティ運営</h1>
             <p>多機能で直感的なボットを活用して、より効率的で魅力的なサーバーを作りましょう。</p>
-            <button class="cta-button" onclick="navigateTo('#features')">Go to docs</button> <!-- ドキュメントセクションへスクロール -->
+            <a href="https://example.com/docs" class="cta-button">Go to docs</a> <!-- ドキュメントページのURL -->
         </div>
     </header>
 
@@ -49,7 +49,7 @@
             <div class="about-content">
                 <h2>運営情報</h2>
                 <p>私たちはユーザーにとって最高の体験を提供することを目指し、継続的な改善を行っています。</p>
-                <button class="cta-button" onclick="navigateTo('about.html')">詳細説明を見る</button> <!-- 詳細説明へのリンク -->
+                <a href="about.html" class="cta-button">詳細説明を見る</a> <!-- 運営情報詳細ページ -->
             </div>
         </section>
     </main>
