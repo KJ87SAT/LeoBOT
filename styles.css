@@ -9,8 +9,8 @@ body {
     font-family: 'Noto Sans JP', sans-serif;
     line-height: 1.6;
     color: #f5f5f5;
-    background-color: #121212;
-    scroll-behavior: smooth;
+    background-color: #1a1a1a;
+    scroll-behavior: smooth; /* スムーズスクロール */
 }
 
 /* ナビゲーションバー */
@@ -18,10 +18,10 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     padding: 1rem 0;
     z-index: 1000;
-    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .navbar ul {
@@ -40,7 +40,7 @@ body {
 }
 
 .navbar ul li a:hover {
-    background: #f5f5f5;
+    background: #5cdb95;
     color: #121212;
     border-radius: 5px;
 }
@@ -48,7 +48,7 @@ body {
 /* ヒーローヘッダー */
 .hero {
     height: 100vh;
-    background: linear-gradient(135deg, #333, #444);
+    background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,21 +74,22 @@ body {
     border-radius: 30px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: transform 0.3s, background 0.3s;
 }
 
 .cta-button:hover {
     background: #45b582;
+    transform: scale(1.1);
 }
 
-/* セクション */
+/* 各セクション */
 .section {
     padding: 4rem 1rem;
     text-align: center;
 }
 
 .features {
-    background: #1e1e1e;
+    background: #222;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
@@ -97,59 +98,10 @@ body {
 
 .feature {
     padding: 2rem;
-    background: #252525;
+    background: #2e2e2e;
     border-radius: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .feature:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
-}
-
-.about {
-    background: #181818;
-}
-
-.contact {
-    background: #222;
-}
-
-.contact form {
-    max-width: 500px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact input, .contact textarea {
-    width: 100%;
-    padding: 1rem;
-    border: none;
-    border-radius: 5px;
-    background: #333;
-    color: #fff;
-}
-
-.contact button {
-    background: #5cdb95;
-    color: #121212;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.contact button:hover {
-    background: #45b582;
-}
-
-/* フッター */
-.footer {
-    background: #121212;
-    padding: 2rem 1rem;
-    text-align: center;
-    color: #757575;
-}
+    transform: translat
