@@ -4,26 +4,22 @@ document.querySelectorAll('.navbar a, .cta-button').forEach(link => {
         // デフォルトのリンク動作を無効化
         e.preventDefault();
 
-        // リンク先のID（href属性）を取得
-        const targetId = this.getAttribute('href');
+        const targetId = this.getAttribute('href');  // リンク先を取得
 
-        // 対象の要素を取得
-        const targetElement = document.querySelector(targetId);
-
-        // 対象の要素が存在する場合にスクロールアニメーションを実行
-        if (targetElement) {
-            targetElement.scrollIntoView({
-                behavior: 'smooth',  // スムーズにスクロール
-                block: 'start'       // 要素の先頭にスクロール
-            });
-        } else {
-            // リンク先がURLの場合は通常の遷移
+        // 外部URLかページ内リンクかを判別
+        if (targetId.startsWith('http') || targetId.startsWith('https')) {
+            // 外部リンクの場合、通常の遷移を行う
             window.location.href = targetId;
+        } else {
+            // ページ内リンクの場合、スクロールアニメーションを実行
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',  // スムーズにスクロール
+                    block: 'start'       // 要素の先頭にスクロール
+                });
+            }
         }
     });
 });
-
-// URL遷移用の関数（別ページへ遷移）
-function navigateTo(url) {
-    window.location.href = url;
-}
