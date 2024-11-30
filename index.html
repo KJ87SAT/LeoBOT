@@ -7,43 +7,44 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- ヘッダー -->
+    <!-- 固定ナビゲーションバー -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="#features">機能</a></li>
+            <li><a href="#about">運営情報</a></li>
+            <li><a href="#contact">お問い合わせ</a></li>
+            <li><a href="https://example.com" target="_blank">公式サイト</a></li>
+        </ul>
+    </nav>
+
+    <!-- ヒーローセクション -->
     <header class="hero">
-        <nav class="navbar">
-            <ul>
-                <li><a href="#features">機能</a></li>
-                <li><a href="#about">運営情報</a></li>
-                <li><a href="#contact">お問い合わせ</a></li>
-                <li><a href="https://example.com" target="_blank">公式サイト</a></li>
-            </ul>
-        </nav>
         <div class="hero-content">
             <h1>Discord Botでコミュニティを強化</h1>
-            <p>自動化、カスタマイズ、効率化を簡単に実現します。</p>
+            <p>シンプルな操作で多機能を体験。次世代のサーバー管理をお試しください。</p>
             <a href="#features" class="cta-button">詳しく見る</a>
         </div>
     </header>
+
     <!-- メインセクション -->
     <main>
         <section id="features" class="section features">
             <div class="feature">
-                <h2>主な機能</h2>
-                <p>サーバー管理、音楽再生、カスタムコマンド、AI対応のチャットサポートなど、多様な機能を提供します。</p>
+                <h2>機能概要</h2>
+                <p>自動化、音楽再生、カスタムコマンド、AI対応のチャットなど、多機能を簡単に設定可能。</p>
             </div>
             <div class="feature">
-                <h2>簡単設定</h2>
-                <p>わかりやすいインターフェースで、初心者でもすぐに始められます。</p>
+                <h2>簡単導入</h2>
+                <p>初心者にも優しい直感的なインターフェースで、すぐに活用可能です。</p>
             </div>
         </section>
         <section id="about" class="section about">
-            <div class="about-content">
-                <h2>運営情報</h2>
-                <p>私たちはDiscordのユーザーに、最高の体験を提供するために努力しています。</p>
-            </div>
+            <h2>運営情報</h2>
+            <p>私たちはコミュニティの効率化と成長をサポートすることに情熱を注いでいます。</p>
         </section>
         <section id="contact" class="section contact">
             <h2>お問い合わせ</h2>
-            <p>ご質問やフィードバックはお気軽にご連絡ください。</p>
+            <p>ご質問やご意見をお寄せください。</p>
             <form id="contactForm">
                 <label for="name">お名前</label>
                 <input type="text" id="name" name="name" required>
@@ -55,10 +56,13 @@
             </form>
         </section>
     </main>
+
     <!-- フッター -->
     <footer class="footer">
         <p>&copy; 2024 運営チーム. All rights reserved.</p>
     </footer>
+
+    <!-- スクリプト -->
     <script src="script.js"></script>
 </body>
 </html>
