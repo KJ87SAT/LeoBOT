@@ -7,46 +7,57 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- ヘッダー -->
     <header class="hero">
+        <nav class="navbar">
+            <ul>
+                <li><a href="#features">機能</a></li>
+                <li><a href="#about">運営情報</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+                <li><a href="https://example.com" target="_blank">公式サイト</a></li>
+            </ul>
+        </nav>
         <div class="hero-content">
-            <h1>Revolutionize Your Discord Experience</h1>
-            <p>Seamless automation, intelligent interaction, and endless customization.</p>
-            <a href="#features" class="cta-button">Discover More</a>
+            <h1>Discord Botでコミュニティを強化</h1>
+            <p>自動化、カスタマイズ、効率化を簡単に実現します。</p>
+            <a href="#features" class="cta-button">詳しく見る</a>
         </div>
     </header>
+    <!-- メインセクション -->
     <main>
         <section id="features" class="section features">
             <div class="feature">
-                <h2>Advanced Features</h2>
-                <p>Explore the cutting-edge functionalities of our Discord Bot, designed for efficiency and simplicity.</p>
+                <h2>主な機能</h2>
+                <p>サーバー管理、音楽再生、カスタムコマンド、AI対応のチャットサポートなど、多様な機能を提供します。</p>
             </div>
             <div class="feature">
-                <h2>Customizable Experience</h2>
-                <p>Tailor every aspect to fit your community's unique needs.</p>
+                <h2>簡単設定</h2>
+                <p>わかりやすいインターフェースで、初心者でもすぐに始められます。</p>
             </div>
         </section>
         <section id="about" class="section about">
             <div class="about-content">
-                <h2>About Us</h2>
-                <p>We are committed to innovation and providing the best tools for your Discord server.</p>
+                <h2>運営情報</h2>
+                <p>私たちはDiscordのユーザーに、最高の体験を提供するために努力しています。</p>
             </div>
         </section>
         <section id="contact" class="section contact">
-            <h2>Contact Us</h2>
-            <p>Get in touch for support or to share your feedback.</p>
+            <h2>お問い合わせ</h2>
+            <p>ご質問やフィードバックはお気軽にご連絡ください。</p>
             <form id="contactForm">
-                <label for="name">Name</label>
+                <label for="name">お名前</label>
                 <input type="text" id="name" name="name" required>
-                <label for="email">Email</label>
+                <label for="email">メールアドレス</label>
                 <input type="email" id="email" name="email" required>
-                <label for="message">Message</label>
+                <label for="message">メッセージ</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
-                <button type="submit">Send</button>
+                <button type="submit">送信</button>
             </form>
         </section>
     </main>
+    <!-- フッター -->
     <footer class="footer">
-        <p>&copy; 2024 Your Company. All rights reserved.</p>
+        <p>&copy; 2024 運営チーム. All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>
