@@ -105,7 +105,7 @@ a {
     margin-bottom: 1.5rem;
 }
 
-/* 各セクション */
+/* メインセクション */
 .section {
     padding: 4rem 1rem;
     text-align: center;
@@ -133,6 +133,24 @@ a {
 .about {
     background: #181818;
     padding: 4rem 1rem;
+}
+
+/* 詳細説明ボタン */
+.about-content .cta-button {
+    background: #3498db;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    text-align: center;
+    display: inline-block;
+    margin-top: 1.5rem;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.about-content .cta-button:hover {
+    background: #2980b9;
+    transform: scale(1.1);
 }
 
 /* フッター */
