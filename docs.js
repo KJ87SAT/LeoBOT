@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { category: '3', title: 'Google検索', description: '指定したメッセージをGoogle経由で検索し、その結果を表示します。' , usage: '/search [検索内容]' },
         { category: '1', title: 'アナウンスチャンネル設定、解除', description: 'アナウンスチャンネルを設定、解除をします。' , usage: '/set_announcement' },
         { category: '1', title: 'ウェルカムメッセージチャンネル設定', description: 'ユーザが参加したときのウェルカムメッセージ送信チャンネルを設定します。' , usage: '/set_channel' },
-        { category: '1', title: 'ウェルカムメッセージの内容設定' , description: 'ユーザーが参加したときのウェルカムメッセージの内容を設定します。' , usage: '/set_message' },  
+        { category: '1', title: 'ウェルカムメッセージの内容設定' , description: 'ユーザーが参加したときのウェルカムメッセージの内容を設定します。' , usage: '/set_message' }
     ];
 
     const commandList = document.getElementById('command-list');
