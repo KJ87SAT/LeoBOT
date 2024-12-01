@@ -16,7 +16,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { category: '3', title: 'Google検索', description: '指定したメッセージをGoogle経由で検索し、その結果を表示します。', usage: '/search [検索内容]', admin: false },
         { category: '1', title: 'アナウンスチャンネル設定、解除', description: 'アナウンスチャンネルを設定、解除をします。', usage: '/set_announcement', admin: true },
         { category: '1', title: 'ウェルカムメッセージチャンネル設定', description: 'ユーザが参加したときのウェルカムメッセージ送信チャンネルを設定します。', usage: '/set_channel', admin: true },
-        { category: '1', title: 'ウェルカムメッセージの内容設定', description: 'ユーザーが参加したときのウェルカムメッセージの内容を設定します。', usage: '/set_message', admin: true }
+        { category: '1', title: 'ウェルカムメッセージの内容設定', description: 'ユーザーが参加したときのウェルカムメッセージの内容を設定します。', usage: '/set_message', admin: true },
+        { category: '1', title: 'VCログチャンネル設定', description: 'ユーザーがVCに参加、退出、移動したときにログを送信するチャンネルを設定します。' , usage: '/set_vc_log_channel', admin: true },
+        { category: '1', title: '地震情報送信Webhook作成', desciription: 'このコマンドを実行したチャンネルに地震情報を送信するためのWebhookを作成します。' , usage: '/setup_earthquake_webhook' , admin: true },
+        { category: '1', title: 'チケットパネル作成', description: 'チケットパネルを作成します。' , usage: '/ticket' , admin: true },
+        { category: '1', title: 'タイマー', description: '指定した時間をタイマーで時間を測り、時間が経ったらお知らせします。' , usage: '/timer [seconds] & [minutes]' , admin: false },
+        { category: '1', title: '認証パネル作成' , description: '認証パネルを作成します。' , usage: '/verifier' , admin: true }
     ];
 
     const commandList = document.getElementById('command-list');
