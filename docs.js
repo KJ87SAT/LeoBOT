@@ -6,17 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { category: '1', title: 'ロールパネル作成', description: 'ロールパネルを作成します。', usage: '/create_role_panel [role]' },
         { category: '1', title: '一日チャット', description: '一日限定のチャットを初期化します。', usage: '/daychat' },
         { category: '1', title: '認証メッセージ削除', description: '認証メッセージを削除します。', usage: '/delete_verifier' },
-        { category: '1', title: '一日チャット終了', description: '1Dayチャットを手動で終了します。', usage: '/enddaychat' },
-        { category: '1', title: 'グローバルチャット', description: '指定したチャンネルにグローバルチャットを作成します。他サーバーと交流ができます。' , usage: '/glowbal' },
-        { category: '2', title: 'じゃんけん', description: 'じゃんけんを楽しむことができます。' , usage: '/janken' },
-        { category: '3', title: '地震情報確認', description: '最新の地震情報を確認できます。' , usage: '/latest' },
-        { category: '2', title: 'おみくじ', description: 'おみくじを引くことができます。一日の運勢を確かめましょう！' , usage: '/omikuji' },
-        { category: '1', title: 'ウェルカムメッセージ設定解除' , description: 'ウェルカムメッセージの設定を解除します。' , usage: '/remove_welcome' },
-        { category: '2', title: 'ルーレット', description: 'ランダムルーレットを回します。最大10項目まで設定できます。' , usage: '/roulette [item1] [item2] 最大10まで ' },
-        { category: '3', title: 'Google検索', description: '指定したメッセージをGoogle経由で検索し、その結果を表示します。' , usage: '/search [検索内容]' },
-        { category: '1', title: 'アナウンスチャンネル設定、解除', description: 'アナウンスチャンネルを設定、解除をします。' , usage: '/set_announcement' },
-        { category: '1', title: 'ウェルカムメッセージチャンネル設定', description: 'ユーザが参加したときのウェルカムメッセージ送信チャンネルを設定します。' , usage: '/set_channel' },
-        { category: '1', title: 'ウェルカムメッセージの内容設定' , description: 'ユーザーが参加したときのウェルカムメッセージの内容を設定します。' , usage: '/set_message' }
+        { category: '1', title: '一日チャット終了', description: '1Dayチャットを手動で終了します。', usage: '/enddaychat' }
     ];
 
     const commandList = document.getElementById('command-list');
