@@ -1,11 +1,19 @@
 /* グローバルスタイル */
-body {
-    font-family: 'Arial', sans-serif;
+body, html {
     margin: 0;
     padding: 0;
+    font-family: 'Arial', sans-serif;
     background: #121212;
     color: #ffffff;
     line-height: 1.6;
+    height: 100%;
+}
+
+/* ルート要素の設定 */
+#root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* ビューポート全体をカバー */
 }
 
 /* ヘッダー */
@@ -26,6 +34,13 @@ body {
 .header p {
     font-size: 1rem;
     color: #ddd;
+}
+
+/* コンテンツ全体を中央に */
+main {
+    flex: 1;
+    padding: 20px;
+    background: #121212;
 }
 
 /* 検索コンテナ */
@@ -171,4 +186,5 @@ body {
     background: #1e1e1e;
     color: #aaa;
     font-size: 0.9rem;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.4);
 }
