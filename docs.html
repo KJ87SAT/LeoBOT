@@ -8,43 +8,48 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- コンテンツを囲むルート要素 -->
+    <div id="root">
+        <!-- ヘッダー -->
+        <header class="header">
+            <h1>Discord Bot コマンド一覧</h1>
+            <p>Botのすべてのコマンドをここで確認できます。</p>
+        </header>
 
-    <!-- ヘッダー -->
-    <header class="header">
-        <h1>Discord Bot コマンド一覧</h1>
-        <p>Botのすべてのコマンドをここで確認できます。</p>
-    </header>
-
-    <!-- 検索機能 -->
-    <section class="search-container">
-    <div class="search-wrapper">
-        <input type="text" id="search" placeholder="コマンドを検索..." />
-        <span class="search-icon"><i class="fa fa-search"></i></span>
-    </div>
-    <button id="search-btn"><span>検索</span></button>
-    <button id="reset-btn"><span>リセット</span></button>
-</section>
-
-
-    <!-- コマンドカテゴリー -->
-    <section class="category-container">
-        <button class="category-btn" data-category="all">すべて</button>
-        <button class="category-btn" data-category="admin">管理</button>
-        <button class="category-btn" data-category="music">音楽</button>
-        <button class="category-btn" data-category="utility">ユーティリティ</button>
-    </section>
-
-    <!-- コマンドリスト -->
-    <main>
-        <section class="command-list" id="command-list">
-            <!-- コマンドの内容は動的に追加されます -->
+        <!-- 検索機能 -->
+        <section class="search-container">
+            <div class="search-wrapper">
+                <label for="search" class="visually-hidden">検索ボックス</label>
+                <input type="text" id="search" placeholder="コマンドを検索..." />
+                <span class="search-icon"><i class="fa fa-search"></i></span>
+            </div>
+            <button id="search-btn" aria-label="検索実行"><span>検索</span></button>
+            <button id="reset-btn" aria-label="検索リセット"><span>リセット</span></button>
         </section>
-    </main>
 
-    <!-- フッター -->
-    <footer class="footer">
-        <p>&copy; 2024 Discord Bot Team. All rights reserved.</p>
-    </footer>
+        <!-- コマンドカテゴリー -->
+        <section class="category-container">
+            <button class="category-btn" data-category="all">すべて</button>
+            <button class="category-btn" data-category="admin">管理</button>
+            <button class="category-btn" data-category="music">音楽</button>
+            <button class="category-btn" data-category="utility">ユーティリティ</button>
+        </section>
+
+        <!-- コマンドリスト -->
+        <main>
+            <section class="command-list" id="command-list">
+                <p id="no-results-message" style="text-align: center; color: #bbb; display: none;">
+                    検索結果がありません。
+                </p>
+                <!-- コマンドの内容は動的に追加されます -->
+            </section>
+        </main>
+
+        <!-- フッター -->
+        <footer class="footer">
+            <p>&copy; 2024 Discord Bot Team. All rights reserved.</p>
+        </footer>
+    </div>
 
     <script src="docs.js"></script>
 </body>
