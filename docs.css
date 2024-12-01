@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden; /* 横スクロール無効化 */
 }
 
 /* ヘッダー */
@@ -18,70 +17,16 @@ body {
     background: linear-gradient(145deg, #1e1e1e, #292929);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     margin-bottom: 2rem;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .header h1 {
     font-size: 2.5rem;
     color: #3c82f6;
-    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    margin: 0;
 }
 
 .header p {
     font-size: 1rem;
     margin: 1rem 0;
-}
-
-/* 検索コンテナ */
-.search-container {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-#search {
-    flex-grow: 1;
-    padding: 0.8rem 1rem;
-    border: none;
-    border-radius: 30px;
-    background: linear-gradient(145deg, #2d2d2d, #1e1e1e);
-    color: #fff;
-    outline: none;
-    font-size: 1rem;
-    box-shadow: inset 4px 4px 8px #1a1a1a, inset -4px -4px 8px #383838;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    max-width: 500px;
-}
-
-#search:focus {
-    box-shadow: 0 0 10px #3c82f6;
-    transform: scale(1.05);
-}
-
-#search-btn {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 30px;
-    background: #3c82f6;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-    max-width: 200px;
-}
-
-#search-btn:hover {
-    background: #5a9ef9;
-    transform: scale(1.1);
-}
-
-#search-btn span {
-    font-weight: bold;
 }
 
 /* コマンドリスト */
@@ -90,9 +35,6 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
     padding: 2rem;
-    flex-grow: 1;
-    width: 100%;
-    box-sizing: border-box;
 }
 
 .command {
@@ -130,54 +72,19 @@ body {
     position: sticky;
     bottom: 0;
     width: 100%;
-    box-sizing: border-box;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
-    z-index: 1000;
 }
 
 .footer p {
     margin: 0;
 }
 
-/* レスポンシブ対応（特にモバイル） */
+/* レスポンシブ対応 */
 @media (max-width: 768px) {
-    .header h1 {
-        font-size: 2rem;
-    }
-
-    .header p {
-        font-size: 0.9rem;
-    }
-
-    #search {
-        max-width: 90%;
-        font-size: 0.9rem;
-    }
-
-    #search-btn {
-        width: 100%;
-        font-size: 0.9rem;
-    }
-
     .command-list {
         grid-template-columns: 1fr;
     }
 
     .footer {
         font-size: 0.8rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .header h1 {
-        font-size: 1.5rem;
-    }
-
-    .header p {
-        font-size: 0.8rem;
-    }
-
-    .command-list {
-        grid-template-columns: 1fr;
     }
 }
