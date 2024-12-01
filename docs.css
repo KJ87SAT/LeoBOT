@@ -1,10 +1,11 @@
 /* グローバルスタイル */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background: #121212;
-    color: #fff;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
 /* ヘッダー */
@@ -19,34 +20,37 @@ body {
     font-size: 2.5rem;
     color: #3c82f6;
     text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1rem;
 }
 
 .header p {
     font-size: 1rem;
-    margin: 1rem 0;
+    color: #ddd;
 }
 
 /* 検索コンテナ */
 .search-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
     margin-top: 1rem;
+    gap: 1rem;
 }
 
 .search-wrapper {
-    position: relative;
+    position: relative; /* 内部要素を絶対位置で配置可能に */
+    display: inline-block;
 }
 
 #search {
-    width: 300px;
-    padding: 0.8rem 1rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 0.8rem 2.5rem 0.8rem 1rem; /* 右側にアイコン分の余白 */
     border: none;
     border-radius: 30px;
     background: linear-gradient(145deg, #2d2d2d, #1e1e1e);
     color: #fff;
-    outline: none;
     font-size: 1rem;
+    outline: none;
     box-shadow: inset 4px 4px 8px #1a1a1a, inset -4px -4px 8px #383838;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
@@ -56,6 +60,17 @@ body {
     transform: scale(1.05);
 }
 
+.search-icon {
+    position: absolute; /* 相対的な親要素内で配置 */
+    top: 50%; /* 垂直方向中央 */
+    right: 1rem; /* 右端に固定 */
+    transform: translateY(-50%); /* 完全中央揃え */
+    color: #888;
+    font-size: 1.2rem;
+    pointer-events: none; /* アイコンをクリック不可に */
+}
+
+/* 検索ボタン */
 #search-btn, #reset-btn {
     padding: 0.8rem 1.5rem;
     border: none;
@@ -89,7 +104,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
-    gap: 10px;
+    gap: 1rem;
 }
 
 .category-btn {
@@ -98,8 +113,8 @@ body {
     border-radius: 30px;
     background: #444;
     color: #fff;
-    cursor: pointer;
     font-size: 1rem;
+    cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
@@ -112,8 +127,8 @@ body {
 .command-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    gap: 1.5rem;
+    padding: 2rem;
 }
 
 .command {
@@ -121,6 +136,11 @@ body {
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.command:hover {
+    transform: translateY(-5px);
 }
 
 .command-title {
@@ -131,10 +151,20 @@ body {
 
 .command-description {
     font-size: 1rem;
+    color: #ddd;
     margin-bottom: 1rem;
 }
 
 .command-usage {
     font-size: 0.9rem;
     color: #bbb;
+}
+
+/* フッター */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1e1e1e;
+    color: #aaa;
+    font-size: 0.9rem;
 }
