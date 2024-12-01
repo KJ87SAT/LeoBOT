@@ -32,18 +32,18 @@ body {
 .search-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 1rem;
     gap: 1rem;
 }
 
 .search-wrapper {
-    position: relative; /* 内部要素を絶対位置で配置可能に */
+    position: relative;
     display: inline-block;
 }
 
 #search {
-    width: 100%;
-    max-width: 400px;
+    width: 300px;
     padding: 0.8rem 2.5rem 0.8rem 1rem; /* 右側にアイコン分の余白 */
     border: none;
     border-radius: 30px;
@@ -61,28 +61,25 @@ body {
 }
 
 .search-icon {
-    position: absolute; /* 相対的な親要素内で配置 */
-    top: 50%; /* 垂直方向中央 */
-    right: 1rem; /* 右端に固定 */
-    transform: translateY(-50%); /* 完全中央揃え */
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    transform: translateY(-50%);
     color: #888;
     font-size: 1.2rem;
-    pointer-events: none; /* アイコンをクリック不可に */
+    pointer-events: none; /* アイコンはクリック不可 */
 }
 
 /* 検索ボタン */
-#search-btn, #reset-btn {
+#search-btn {
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 30px;
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#search-btn {
     background: #3c82f6;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #search-btn:hover {
@@ -91,7 +88,14 @@ body {
 }
 
 #reset-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
     background: #f44336;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #reset-btn:hover {
