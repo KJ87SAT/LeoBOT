@@ -29,7 +29,7 @@ body {
     margin: 1rem 0;
 }
 
-/* 検索コンテナ */
+/* 検索とリセットボタン */
 .search-container {
     display: flex;
     justify-content: center;
@@ -55,7 +55,7 @@ body {
     transform: scale(1.05);
 }
 
-#search-btn {
+#search-btn, #reset-btn {
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 30px;
@@ -66,13 +66,34 @@ body {
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
-#search-btn:hover {
+#search-btn:hover, #reset-btn:hover {
     background: #5a9ef9;
     transform: scale(1.1);
 }
 
-#search-btn span {
+#search-btn span, #reset-btn span {
     font-weight: bold;
+}
+
+/* コマンドカテゴリー */
+.category-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.category-btn {
+    padding: 0.8rem 1.5rem;
+    background: #3c82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.category-btn:hover {
+    background: #5a9ef9;
 }
 
 /* コマンドリスト */
@@ -108,7 +129,7 @@ body {
     margin: 0.5rem 0;
 }
 
-/* フッターのスタイル（固定フッター） */
+/* フッター */
 .footer {
     background-color: #111;
     color: #888;
