@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
         commands.forEach(command => {
             const keywords = command.getAttribute('data-keywords');
             if (keywords.includes(query)) {
-                command.classList.remove('hidden');
+                command.style.display = 'block';
             } else {
-                command.classList.add('hidden');
+                command.style.display = 'none';
             }
         });
     });
