@@ -21,16 +21,28 @@
                 <input type="text" id="search" placeholder="コマンドを検索..." />
                 <span class="search-icon"><i class="fa fa-search"></i></span>
             </div>
-            <button id="search-btn" aria-label="検索実行"><span>検索</span></button>
-            <button id="reset-btn" aria-label="検索リセット"><span>リセット</span></button>
+            <button id="search-btn" aria-label="検索実行">
+                <i class="fa fa-search"></i> <span>検索</span>
+            </button>
+            <button id="reset-btn" aria-label="検索リセット">
+                <i class="fa fa-times-circle"></i> <span>リセット</span>
+            </button>
         </section>
 
         <!-- コマンドカテゴリー -->
         <section class="category-container">
-            <button class="category-btn" data-category="all">すべて</button>
-            <button class="category-btn" data-category="1">管理系</button>
-            <button class="category-btn" data-category="2">遊び系</button>
-            <button class="category-btn" data-category="3">情報系</button>
+            <button class="category-btn" data-category="all">
+                <i class="fa fa-list"></i> <span>すべて</span>
+            </button>
+            <button class="category-btn" data-category="1">
+                <i class="fa fa-cog"></i> <span>管理系</span>
+            </button>
+            <button class="category-btn" data-category="2">
+                <i class="fa fa-gamepad"></i> <span>遊び系</span>
+            </button>
+            <button class="category-btn" data-category="3">
+                <i class="fa fa-info-circle"></i> <span>情報系</span>
+            </button>
         </section>
 
         <!-- コマンドリスト -->
