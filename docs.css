@@ -29,6 +29,52 @@ body {
     margin: 1rem 0;
 }
 
+/* 検索コンテナ */
+.search-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+#search {
+    width: 300px;
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(145deg, #2d2d2d, #1e1e1e);
+    color: #fff;
+    outline: none;
+    font-size: 1rem;
+    box-shadow: inset 4px 4px 8px #1a1a1a, inset -4px -4px 8px #383838;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+#search:focus {
+    box-shadow: 0 0 10px #3c82f6;
+    transform: scale(1.05);
+}
+
+#search-btn {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    background: #3c82f6;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#search-btn:hover {
+    background: #5a9ef9;
+    transform: scale(1.1);
+}
+
+#search-btn span {
+    font-weight: bold;
+}
+
 /* コマンドリスト */
 .command-list {
     display: grid;
