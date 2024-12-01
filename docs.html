@@ -14,28 +14,25 @@
         <p>Botのすべてのコマンドをここで確認できます。</p>
     </header>
 
-    <!-- 検索欄 -->
+    <!-- 検索とリセットボタン -->
     <section class="search-container">
         <input type="text" id="search" placeholder="コマンドを検索..." />
         <button id="search-btn"><span>検索</span></button>
+        <button id="reset-btn"><span>リセット</span></button>
+    </section>
+
+    <!-- コマンドカテゴリー -->
+    <section class="category-container">
+        <button class="category-btn" data-category="all">すべて</button>
+        <button class="category-btn" data-category="admin">管理</button>
+        <button class="category-btn" data-category="music">音楽</button>
+        <button class="category-btn" data-category="utility">ユーティリティ</button>
     </section>
 
     <!-- コマンドリスト -->
     <main>
-        <section class="command-list">
-            <!-- コマンド欄の内容 -->
-            <div class="command">
-                <div class="command-title">!help</div>
-                <div class="command-description">Botの使い方やヘルプを表示します。</div>
-                <div class="command-usage">使い方: !help</div>
-            </div>
-            <div class="command">
-                <div class="command-title">!ping</div>
-                <div class="command-description">Botの応答時間を測定します。</div>
-                <div class="command-usage">使い方: !ping</div>
-            </div>
-            <!-- ... 他のコマンド50個分をここに追加 -->
-            <!-- 省略して他のコマンドを追加してください。 -->
+        <section class="command-list" id="command-list">
+            <!-- コマンドの内容は動的に追加 -->
         </section>
     </main>
 
