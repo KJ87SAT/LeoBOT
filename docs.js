@@ -10,20 +10,26 @@ document.addEventListener('DOMContentLoaded', () => {
     ];
 
     const commandList = document.getElementById('command-list');
+    const noResultsMessage = document.getElementById('no-results-message');
 
     // コマンドを表示する関数
     function renderCommands(commandsToRender) {
         commandList.innerHTML = ''; // リストをクリア
-        commandsToRender.forEach(command => {
-            const commandElement = document.createElement('div');
-            commandElement.classList.add('command');
-            commandElement.innerHTML = `
-                <h3 class="command-title">${command.title}</h3>
-                <p class="command-description">${command.description}</p>
-                <p class="command-usage">使用方法: <code>${command.usage}</code></p>
-            `;
-            commandList.appendChild(commandElement);
-        });
+        if (commandsToRender.length === 0) {
+            noResultsMessage.style.display = 'block';
+        } else {
+            noResultsMessage.style.display = 'none';
+            commandsToRender.forEach(command => {
+                const commandElement = document.createElement('div');
+                commandElement.classList.add('command');
+                commandElement.innerHTML = `
+                    <h3 class="command-title">${command.title}</h3>
+                    <p class="command-description">${command.description}</p>
+                    <p class="command-usage">使用方法: <code>${command.usage}</code></p>
+                `;
+                commandList.appendChild(commandElement);
+            });
+        }
     }
 
     // 初期表示: すべてのコマンド
