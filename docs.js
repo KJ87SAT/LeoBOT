@@ -1,22 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
     // コマンドデータ
     const commands = [
-        { category: '1', title: 'AFK設定', description: 'ユーザーをAFK状態にします。', usage: '/afk [reason]' , admin: false },
-        { category: '1', title: 'AFK設定解除', description: 'ユーザーのAFK状態を解除します。', usage: '/back' , admin: false },
-        { category: '1', title: 'ロールパネル作成', description: 'ロールパネルを作成します。', usage: '/create_role_panel [role]' ,admin: true },
-        { category: '1', title: '一日チャット', description: '一日限定のチャットを初期化します。', usage: '/daychat' , admin: true },
-        { category: '1', title: '認証メッセージ削除', description: '認証メッセージを削除します。', usage: '/delete_verifier' ,admin: true },
-        { category: '1', title: '一日チャット終了', description: '1Dayチャットを手動で終了します。', usage: '/enddaychat' ,admin: true },
-        { category: '1', title: 'グローバルチャット', description: '指定したチャンネルにグローバルチャットを作成します。他サーバーと交流ができます。' , usage: '/glowbal' , admin: ture },
-        { category: '2', title: 'じゃんけん', description: 'じゃんけんを楽しむことができます。' , usage: '/janken' , admin: false },
-        { category: '3', title: '地震情報確認', description: '最新の地震情報を確認できます。' , usage: '/latest' , admin: false },
-        { category: '2', title: 'おみくじ', description: 'おみくじを引くことができます。一日の運勢を確かめましょう！' , usage: '/omikuji' , admin: false },
-        { category: '1', title: 'ウェルカムメッセージ設定解除' , description: 'ウェルカムメッセージの設定を解除します。' , usage: '/remove_welcome' , admin: true },
-        { category: '2', title: 'ルーレット', description: 'ランダムルーレットを回します。最大10項目まで設定できます。' , usage: '/roulette [item1] [item2] 最大10まで ' , admin: false },
-        { category: '3', title: 'Google検索', description: '指定したメッセージをGoogle経由で検索し、その結果を表示します。' , usage: '/search [検索内容]'  , admin: false},
-        { category: '1', title: 'アナウンスチャンネル設定、解除', description: 'アナウンスチャンネルを設定、解除をします。' , usage: '/set_announcement' , admin: true },
-        { category: '1', title: 'ウェルカムメッセージチャンネル設定', description: 'ユーザが参加したときのウェルカムメッセージ送信チャンネルを設定します。' , usage: '/set_channel' , admin: true },
-        { category: '1', title: 'ウェルカムメッセージの内容設定' , description: 'ユーザーが参加したときのウェルカムメッセージの内容を設定します。' , usage: '/set_message' , admin: true }
+        { category: '1', title: 'AFK設定', description: 'ユーザーをAFK状態にします。', usage: '/afk [reason]', admin: false },
+        { category: '1', title: 'AFK設定解除', description: 'ユーザーのAFK状態を解除します。', usage: '/back', admin: false },
+        { category: '1', title: 'ロールパネル作成', description: 'ロールパネルを作成します。', usage: '/create_role_panel [role]', admin: true },
+        { category: '1', title: '一日チャット', description: '一日限定のチャットを初期化します。', usage: '/daychat', admin: true },
+        { category: '1', title: '認証メッセージ削除', description: '認証メッセージを削除します。', usage: '/delete_verifier', admin: true },
+        { category: '1', title: '一日チャット終了', description: '1Dayチャットを手動で終了します。', usage: '/enddaychat', admin: true },
+        { category: '1', title: 'グローバルチャット', description: '指定したチャンネルにグローバルチャットを作成します。他サーバーと交流ができます。', usage: '/glowbal', admin: true },
+        { category: '2', title: 'じゃんけん', description: 'じゃんけんを楽しむことができます。', usage: '/janken', admin: false },
+        { category: '3', title: '地震情報確認', description: '最新の地震情報を確認できます。', usage: '/latest', admin: false },
+        { category: '2', title: 'おみくじ', description: 'おみくじを引くことができます。一日の運勢を確かめましょう！', usage: '/omikuji', admin: false },
+        { category: '1', title: 'ウェルカムメッセージ設定解除', description: 'ウェルカムメッセージの設定を解除します。', usage: '/remove_welcome', admin: true },
+        { category: '2', title: 'ルーレット', description: 'ランダムルーレットを回します。最大10項目まで設定できます。', usage: '/roulette [item1] [item2] 最大10まで', admin: false },
+        { category: '3', title: 'Google検索', description: '指定したメッセージをGoogle経由で検索し、その結果を表示します。', usage: '/search [検索内容]', admin: false },
+        { category: '1', title: 'アナウンスチャンネル設定、解除', description: 'アナウンスチャンネルを設定、解除をします。', usage: '/set_announcement', admin: true },
+        { category: '1', title: 'ウェルカムメッセージチャンネル設定', description: 'ユーザが参加したときのウェルカムメッセージ送信チャンネルを設定します。', usage: '/set_channel', admin: true },
+        { category: '1', title: 'ウェルカムメッセージの内容設定', description: 'ユーザーが参加したときのウェルカムメッセージの内容を設定します。', usage: '/set_message', admin: true }
     ];
 
     const commandList = document.getElementById('command-list');
@@ -30,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             noResultsMessage.style.display = 'none';
             commandsToRender.forEach(command => {
-                const adminIcon = command.admin 
-                    ? `<i class="fa fa-user-shield" title="管理者専用"></i>` 
+                const adminIcon = command.admin
+                    ? `<i class="fa fa-user-shield" title="管理者専用"></i>`
                     : '';
                 const commandElement = document.createElement('div');
                 commandElement.classList.add('command');
