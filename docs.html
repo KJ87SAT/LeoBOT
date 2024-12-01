@@ -4,37 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discord Bot コマンド説明</title>
-    <link rel="stylesheet" href="docs.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- ヘッダー -->
     <header class="header">
         <h1>Discord Bot コマンドリスト</h1>
         <p>以下は、利用可能なコマンドの詳細です。</p>
+        <input type="text" id="search" placeholder="コマンドを検索..." />
     </header>
 
     <!-- コマンドセクション -->
     <main class="command-list">
-        <!-- コマンド枠 -->
-        <section class="command">
+        <section class="command" data-keywords="help assistance">
             <h2 class="command-title">/help</h2>
             <p class="command-description">全コマンドのリストを表示します。</p>
             <p class="command-usage"><strong>使用例:</strong> `/help`</p>
         </section>
 
-        <section class="command">
+        <section class="command" data-keywords="play music song">
             <h2 class="command-title">/play</h2>
             <p class="command-description">指定した曲を再生します。</p>
             <p class="command-usage"><strong>使用例:</strong> `/play <曲名>`</p>
         </section>
 
-        <section class="command">
+        <section class="command" data-keywords="ban user kick remove">
             <h2 class="command-title">/ban</h2>
             <p class="command-description">指定したユーザーをサーバーからBANします。</p>
             <p class="command-usage"><strong>使用例:</strong> `/ban @ユーザー 理由`</p>
         </section>
 
-        <section class="command">
+        <section class="command" data-keywords="kick user remove">
             <h2 class="command-title">/kick</h2>
             <p class="command-description">指定したユーザーをサーバーからキックします。</p>
             <p class="command-usage"><strong>使用例:</strong> `/kick @ユーザー`</p>
@@ -45,6 +45,8 @@
     <footer class="footer">
         <p>&copy; 2024 Discord Bot Team. All rights reserved.</p>
     </footer>
+
+    <!-- スクリプト -->
+    <script src="script.js"></script>
 </body>
 </html>
-
