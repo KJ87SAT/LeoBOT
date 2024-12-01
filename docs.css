@@ -36,9 +36,9 @@ body, html {
     color: #ddd;
 }
 
-/* コンテンツ全体を中央に */
+/* メインコンテンツ */
 main {
-    flex: 1;
+    flex: 1; /* コンテンツの高さが不足するときにフッターを押し下げる */
     padding: 20px;
     background: #121212;
 }
@@ -49,7 +49,7 @@ main {
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
-    gap: 1rem;
+    gap: 1rem; /* ボタンと入力フィールド間の間隔 */
 }
 
 .search-wrapper {
@@ -82,19 +82,22 @@ main {
     transform: translateY(-50%);
     color: #888;
     font-size: 1.2rem;
-    pointer-events: none; /* アイコンはクリック不可 */
+    pointer-events: none;
 }
 
-/* 検索ボタン */
-#search-btn {
+/* ボタンのスタイル */
+#search-btn, #reset-btn {
     padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 30px;
     color: #fff;
     font-size: 1rem;
     cursor: pointer;
-    background: #3c82f6;
     transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#search-btn {
+    background: #3c82f6;
 }
 
 #search-btn:hover {
@@ -103,14 +106,7 @@ main {
 }
 
 #reset-btn {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 1rem;
-    cursor: pointer;
     background: #f44336;
-    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 #reset-btn:hover {
