@@ -1,60 +1,63 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
+    // コマンドデータ
     const commands = [
-        { name: '!help', description: 'Botの使い方やヘルプを表示します。', usage: '!help', category: 'utility' },
-        { name: '!ping', description: 'Botの応答時間を測定します。', usage: '!ping', category: 'utility' },
-        { name: '!play', description: '音楽を再生します。', usage: '!play [曲名]', category: 'music' },
-        { name: '!skip', description: '再生中の音楽をスキップします。', usage: '!skip', category: 'music' },
-        { name: '!kick', description: 'ユーザーをサーバーからキックします。', usage: '!kick [ユーザー名]', category: 'admin' },
-        { name: '!ban', description: 'ユーザーをサーバーから禁止します。', usage: '!ban [ユーザー名]', category: 'admin' },
-        { name: '!mute', description: 'ユーザーをミュートにします。', usage: '!mute [ユーザー名]', category: 'admin' },
-        { name: '!unmute', description: 'ユーザーのミュートを解除します。', usage: '!unmute [ユーザー名]', category: 'admin' },
-        { name: '!clear', description: 'チャットをクリアします。', usage: '!clear [メッセージ数]', category: 'admin' },
-        { name: '!info', description: 'Botの情報を表示します。', usage: '!info', category: 'utility' }
-        // ここに50個のコマンドを追加
+        { category: 'admin', title: 'kick', description: '指定したユーザーをサーバーからキックします。', usage: '!kick @user' },
+        { category: 'admin', title: 'ban', description: '指定したユーザーをサーバーからバンします。', usage: '!ban @user' },
+        { category: 'music', title: 'play', description: '指定した音楽を再生します。', usage: '!play <song_name>' },
+        { category: 'music', title: 'pause', description: '再生中の音楽を一時停止します。', usage: '!pause' },
+        { category: 'utility', title: 'ping', description: 'ボットの応答速度を確認します。', usage: '!ping' },
+        { category: 'utility', title: 'help', description: 'ボットの使い方を表示します。', usage: '!help' }
     ];
 
-    const commandListContainer = document.getElementById('command-list');
+    const commandList = document.getElementById('command-list');
 
-    // コマンドリストの表示
-    function displayCommands(commandsToDisplay) {
-        commandListContainer.innerHTML = '';
-        commandsToDisplay.forEach(command => {
+    // コマンドを表示する関数
+    function renderCommands(commandsToRender) {
+        commandList.innerHTML = ''; // リストをクリア
+        commandsToRender.forEach(command => {
             const commandElement = document.createElement('div');
             commandElement.classList.add('command');
             commandElement.innerHTML = `
-                <div class="command-title">${command.name}</div>
-                <div class="command-description">${command.description}</div>
-                <div class="command-usage">${command.usage}</div>
+                <h3 class="command-title">${command.title}</h3>
+                <p class="command-description">${command.description}</p>
+                <p class="command-usage">使用方法: <code>${command.usage}</code></p>
             `;
-            commandListContainer.appendChild(commandElement);
+            commandList.appendChild(commandElement);
         });
     }
 
-    // 検索機能
-    const searchInput = document.getElementById('search');
-    searchInput.addEventListener('input', function () {
-        const query = searchInput.value.toLowerCase();
-        const filteredCommands = commands.filter(command => command.name.toLowerCase().includes(query));
-        displayCommands(filteredCommands);
-    });
+    // 初期表示: すべてのコマンド
+    renderCommands(commands);
 
-    // リセット機能
-    const resetButton = document.getElementById('reset-btn');
-    resetButton.addEventListener('click', function () {
-        searchInput.value = '';
-        displayCommands(commands);
-    });
-
-    // カテゴリーフィルター機能
+    // カテゴリーボタンのクリックイベント
     const categoryButtons = document.querySelectorAll('.category-btn');
     categoryButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const category = button.getAttribute('data-category');
-            const filteredCommands = category === 'all' ? commands : commands.filter(command => command.category === category);
-            displayCommands(filteredCommands);
+        button.addEventListener('click', () => {
+            const selectedCategory = button.getAttribute('data-category');
+            if (selectedCategory === 'all') {
+                renderCommands(commands); // すべてのコマンドを表示
+            } else {
+                const filteredCommands = commands.filter(command => command.category === selectedCategory);
+                renderCommands(filteredCommands); // 選択されたカテゴリーのコマンドを表示
+            }
         });
     });
 
-    // 初期表示
-    displayCommands(commands);
+    // 検索機能
+    const searchInput = document.getElementById('search');
+    searchInput.addEventListener('input', () => {
+        const query = searchInput.value.toLowerCase();
+        const filteredCommands = commands.filter(command => {
+            return command.title.toLowerCase().includes(query) || 
+                   command.description.toLowerCase().includes(query);
+        });
+        renderCommands(filteredCommands); // 検索結果に基づいたコマンドを表示
+    });
+
+    // リセットボタン
+    const resetButton = document.getElementById('reset-btn');
+    resetButton.addEventListener('click', () => {
+        searchInput.value = ''; // 検索入力欄をクリア
+        renderCommands(commands); // すべてのコマンドを再表示
+    });
 });
