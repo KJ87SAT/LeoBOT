@@ -105,7 +105,22 @@ body {
     margin: 0.5rem 0;
 }
 
- <!-- フッター -->
-    <footer class="footer">
-        <p>&copy; 2024 Discord Bot Team. All rights reserved.</p>
-    </footer>
+ /* フッターのスタイル（固定フッター） */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    color: #888;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000; /* 他の要素より上に表示 */
+}
+
+.footer p {
+    margin: 0;
+}
+
