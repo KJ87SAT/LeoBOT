@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // コマンドデータ
     const commands = [
-        { category: 'admin', title: 'kick', description: '指定したユーザーをサーバーからキックします。', usage: '!kick @user' },
-        { category: 'admin', title: 'ban', description: '指定したユーザーをサーバーからバンします。', usage: '!ban @user' },
-        { category: 'music', title: 'play', description: '指定した音楽を再生します。', usage: '!play <song_name>' },
-        { category: 'music', title: 'pause', description: '再生中の音楽を一時停止します。', usage: '!pause' },
+        { category: 'admin', title: 'afk', description: 'ユーザーをAFK状態にします。', usage: '/afk <reason>' },
+        { category: 'admin', title: 'back', description: 'ユーザーのAFK状態を解除します。。', usage: '/back' },
+        { category: 'admin', title: 'create_role_panel', description: 'ロールパネルを作成します。', usage: '/create_role_panel <role>' },
+        { category: 'admin', title: 'daychat', description: '一日限定のチャットを初期化します。', usage: '/daychat' },
         { category: 'utility', title: 'ping', description: 'ボットの応答速度を確認します。', usage: '!ping' },
         { category: 'utility', title: 'help', description: 'ボットの使い方を表示します。', usage: '!help' }
     ];
