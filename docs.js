@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { category: '1', title: 'AFK設定', description: 'ユーザーをAFK状態にします。', usage: '/afk [reason]' , admin: false },
         { category: '1', title: 'AFK設定解除', description: 'ユーザーのAFK状態を解除します。', usage: '/back' , admin: false },
         { category: '1', title: 'ロールパネル作成', description: 'ロールパネルを作成します。', usage: '/create_role_panel [role]' ,admin: true },
-        { category: '1', title: '一日チャット', description: '一日限定のチャットを初期化します。', usage: '/daychat' , admin: false },
+        { category: '1', title: '一日チャット', description: '一日限定のチャットを初期化します。', usage: '/daychat' , admin: true },
         { category: '1', title: '認証メッセージ削除', description: '認証メッセージを削除します。', usage: '/delete_verifier' ,admin: true },
         { category: '1', title: '一日チャット終了', description: '1Dayチャットを手動で終了します。', usage: '/enddaychat' ,admin: true },
         { category: '1', title: 'グローバルチャット', description: '指定したチャンネルにグローバルチャットを作成します。他サーバーと交流ができます。' , usage: '/glowbal' , admin: ture },
