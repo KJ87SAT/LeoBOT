@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
         { category: '1', title: 'サーバー内のランキングを確認' , description: 'サーバー内のランキングを確認できます。' , usage: '/rankings' , admin: true , icon: 'fa-trophy' }
     ];
 
-    const commandList = document.getElementById('command-list');
+   const commandList = document.getElementById('command-list');
     const noResultsMessage = document.getElementById('no-results-message');
 
-   // コマンドを表示する関数
+    // コマンドを表示する関数
     function renderCommands(commandsToRender) {
         commandList.innerHTML = ''; // リストをクリア
         if (commandsToRender.length === 0) {
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         renderCommands(commands); // すべてのコマンドを再表示
     });
 
-     // 管理者専用ボタンのクリックイベント
+    // 管理者専用ボタンのクリックイベント
     const adminOnlyButton = document.getElementById('admin-only-btn');
     adminOnlyButton.addEventListener('click', () => {
         const adminCommands = commands.filter(command => command.admin === true); // 管理者専用コマンドを抽出
