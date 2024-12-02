@@ -205,3 +205,13 @@ button:hover {
         font-size: 1.8rem;
     }
 }
+
+.admin-btn {
+    background: #555;
+    color: var(--text-color);
+}
+
+.admin-btn:hover {
+    background: var(--danger-color);
+}
+
