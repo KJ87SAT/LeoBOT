@@ -163,7 +163,7 @@ button:hover {
 }
 
 /* モバイル対応: 検索バーとボタンが重ならないように調整 */
-@media (max-width: 768px) {
+@media (max-width: 1024px) { /* すべてのモバイル画面に対応 */
     .search-container {
         flex-direction: column; /* 子要素を縦並びに */
         gap: 0.5rem; /* ギャップを縮小 */
