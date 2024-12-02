@@ -63,10 +63,12 @@ main {
 .search-wrapper {
     position: relative;
     display: inline-block;
+    width: 100%;
+    max-width: 400px;
 }
 
 #search {
-    width: 300px;
+    width: 100%;
     padding: 0.8rem 2.5rem 0.8rem 1rem;
     border: none;
     border-radius: 30px;
@@ -101,6 +103,8 @@ button {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    max-width: 200px;
 }
 
 button:focus {
@@ -134,12 +138,15 @@ button:focus {
     justify-content: center;
     margin-top: 1rem;
     gap: 1rem;
+    flex-wrap: wrap;
 }
 
 .category-btn {
     background: #444;
     color: var(--text-color);
     transition: background 0.3s ease, transform 0.2s ease;
+    flex: 1;
+    max-width: 150px;
 }
 
 .category-btn:hover {
@@ -195,9 +202,27 @@ button:focus {
 }
 
 /* レスポンシブデザイン */
+@media (max-width: 900px) {
+    .category-container {
+        gap: 0.5rem;
+    }
+
+    .category-btn {
+        flex: none;
+        width: 100%;
+        max-width: unset;
+    }
+
+    #search {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.5rem 0.7rem 0.9rem;
+    }
+}
+
 @media (max-width: 600px) {
     .search-container {
         flex-direction: column;
+        align-items: stretch;
         gap: 0.5rem;
     }
 
@@ -205,11 +230,20 @@ button:focus {
         width: 100%;
     }
 
-    .category-btn {
-        width: 100%;
-    }
-
     .command-list {
         grid-template-columns: 1fr;
+    }
+
+    .command {
+        padding: 1rem;
+    }
+
+    .command-title {
+        font-size: 1rem;
+    }
+
+    .command-description,
+    .command-usage {
+        font-size: 0.9rem;
     }
 }
