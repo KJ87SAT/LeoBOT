@@ -45,7 +45,7 @@ body, html {
     align-items: center;
     margin: 1.5rem 0;
     gap: 1rem;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* 子要素を折り返す設定 */
 }
 
 .search-wrapper {
@@ -68,7 +68,6 @@ body, html {
     box-shadow: inset 3px 3px 6px #1a1a1a, inset -3px -3px 6px #383838;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-
 
 #search:focus {
     box-shadow: 0 0 10px var(--primary-color);
@@ -161,4 +160,21 @@ button:hover {
     padding: 1rem;
     background: #1e1e1e;
     color: var(--muted-text-color);
+}
+
+/* モバイル対応: 検索バーとボタンが重ならないように調整 */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column; /* 子要素を縦並びに */
+        gap: 0.5rem; /* ギャップを縮小 */
+        align-items: stretch; /* 子要素を全幅に */
+    }
+
+    #search {
+        width: 100%; /* フル幅 */
+    }
+
+    button {
+        width: 100%; /* ボタンもフル幅に */
+    }
 }
