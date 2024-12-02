@@ -89,4 +89,11 @@ document.addEventListener('DOMContentLoaded', () => {
         searchInput.value = ''; // 検索入力欄をクリア
         renderCommands(commands); // すべてのコマンドを再表示
     });
+
+     // 管理者専用ボタンのクリックイベント
+    const adminOnlyButton = document.getElementById('admin-only-btn');
+    adminOnlyButton.addEventListener('click', () => {
+        const adminCommands = commands.filter(command => command.admin === true); // 管理者専用コマンドを抽出
+        renderCommands(adminCommands); // 管理者専用コマンドを表示
+    });
 });
