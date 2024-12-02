@@ -21,7 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
         { category: '1', title: '地震情報送信Webhook作成', description: 'このコマンドを実行したチャンネルに地震情報を送信するためのWebhookを作成します。' , usage: '/setup_earthquake_webhook' , admin: true, icon: 'fa-plug' },
         { category: '1', title: 'チケットパネル作成', description: 'チケットパネルを作成します。' , usage: '/ticket' , admin: true, icon: 'fa-ticket-alt' },
         { category: '1', title: 'タイマー', description: '指定した時間をタイマーで時間を測り、時間が経ったらお知らせします。' , usage: '/timer [seconds] & [minutes]' , admin: false, icon: 'fa-clock' },
-        { category: '1', title: '認証パネル作成' , description: '認証パネルを作成します。' , usage: '/verifier' , admin: true, icon: 'fa-check-circle' }
+        { category: '1', title: '認証パネル作成' , description: '認証パネルを作成します。' , usage: '/verifier' , admin: true, icon: 'fa-check-circle' },
+        { category: '1', title: '埋め込みメッセージデザイナー' , description: '埋め込みメッセージデザイナーを起動します。' , usage: '/embed_designer' , admin: false , icon: 'fa-pen-to-square' },
+        { category: '1', title: '会話レベルアップ通知チャンネル設定' , description: '会話でレベルが上がるシステムで、そのレベルUP通知のチャンネルを設定します。' , usage: '/setlevelchannel [channel]' , admin: true , icon: 'fa-chart-simple' },
+        { category: '1', title: 'レベルアップ機能設定切り替え' , description: '会話内のレベルUP機能をON、OFFを切り替えます。' , usage: '/togglelevel' , admin: true , icon: 'fa-slider' },
+        { category: '1', title: '自分のレベルを確認' , description: '会話内での自分のレベルを確認できます。' , usage: '/mylevel' , admin: false , icon: 'fa-shield-check' },
+        { category: '1', title: 'サーバー内のランキングを確認' , description: 'サーバー内のランキングを確認できます。' , usage: '/rankings' , admin: true , icon: 'fa-ranking-star' }
     ];
 
     const commandList = document.getElementById('command-list');
