@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const commandList = document.getElementById('command-list');
     const noResultsMessage = document.getElementById('no-results-message');
 
-    // コマンドを表示する関数
+   // コマンドを表示する関数
     function renderCommands(commandsToRender) {
         commandList.innerHTML = ''; // リストをクリア
         if (commandsToRender.length === 0) {
